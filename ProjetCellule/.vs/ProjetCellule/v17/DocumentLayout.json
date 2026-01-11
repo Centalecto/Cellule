@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kaybo\\OneDrive\\Desktop\\CelluleProjet\\Cellule\\ProjetCellule\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\kaybo\\onedrive\\desktop\\celluleprojet\\cellule\\projetcellule\\assets\\scripts\\cellulesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cellulesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CelluleSystem.cs",
+              "DocumentMoniker": "C:\\Users\\kaybo\\OneDrive\\Desktop\\CelluleProjet\\Cellule\\ProjetCellule\\Assets\\Scripts\\CelluleSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CelluleSystem.cs",
+              "ToolTip": "C:\\Users\\kaybo\\OneDrive\\Desktop\\CelluleProjet\\Cellule\\ProjetCellule\\Assets\\Scripts\\CelluleSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CelluleSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T15:45:06.261Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
