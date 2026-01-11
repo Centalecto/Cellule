@@ -170,26 +170,42 @@ MonoBehaviour:
   damping: 5
   sleepVelocityThreshold: 0.05
   mutationChance: 0.25
-  mutableRenderers:
+  mutationSlots:
   - {fileID: 5808547726856396042}
   - {fileID: 461913010250410527}
   - {fileID: 9133710250773040872}
   - {fileID: 1665632338009684479}
   - {fileID: 7590568523633068694}
   - {fileID: 6536537902050029026}
-  possibleMaterials:
-  - {fileID: 2100000, guid: 6479f2b5c10b3404399fc3635855240f, type: 2}
-  - {fileID: 2100000, guid: 448a1e33b7a5adc43a07c2e64303b19a, type: 2}
-  - {fileID: 2100000, guid: 1d3014cdc48e6ea4db3b8b9c3e8bd768, type: 2}
-  - {fileID: 2100000, guid: 902a659c1b3bb5045a7bbee859be59c1, type: 2}
-  - {fileID: 2100000, guid: 9d4529ef777af644681625949883d7e0, type: 2}
-  - {fileID: 2100000, guid: 5cad5349b295bc94baf9c77cea494398, type: 2}
-  - {fileID: 2100000, guid: e8541734f3562ce4ab67bc76376ba490, type: 2}
-  - {fileID: 2100000, guid: 1ed4f1a0d4dc51449b600c8ece6d36ff, type: 2}
-  - {fileID: 2100000, guid: f2318d6f05a3bef438a4530725a23fc0, type: 2}
-  - {fileID: 2100000, guid: 19fdc4b341292814d970c3ef94bc57fe, type: 2}
-  - {fileID: 2100000, guid: 8a8b152b589eaa94db4891509349369b, type: 2}
-  - {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
+  materialMutations:
+  - material: {fileID: 2100000, guid: 6479f2b5c10b3404399fc3635855240f, type: 2}
+    scaleDelta: 0.1
+    lifetimeDelta: 0
+    divisionIntervalDelta: 0
+  - material: {fileID: 2100000, guid: 9d4529ef777af644681625949883d7e0, type: 2}
+    scaleDelta: -0.1
+    lifetimeDelta: 0
+    divisionIntervalDelta: 0
+  - material: {fileID: 2100000, guid: 8a8b152b589eaa94db4891509349369b, type: 2}
+    scaleDelta: 0
+    lifetimeDelta: 3
+    divisionIntervalDelta: 0
+  - material: {fileID: 2100000, guid: 1d3014cdc48e6ea4db3b8b9c3e8bd768, type: 2}
+    scaleDelta: 0
+    lifetimeDelta: -3
+    divisionIntervalDelta: 0
+  - material: {fileID: 2100000, guid: f2318d6f05a3bef438a4530725a23fc0, type: 2}
+    scaleDelta: 0
+    lifetimeDelta: 0
+    divisionIntervalDelta: 0.5
+  - material: {fileID: 2100000, guid: 19fdc4b341292814d970c3ef94bc57fe, type: 2}
+    scaleDelta: 0
+    lifetimeDelta: 0
+    divisionIntervalDelta: -0.5
+  - material: {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
+    scaleDelta: 0
+    lifetimeDelta: 0
+    divisionIntervalDelta: 0
 --- !u!1001 &4735983920749820974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246,6 +262,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: G.Chromose 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1235537886685471012, guid: 9728dd29efb36c74aaa4b8c731afdb9d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
+    - target: {fileID: 1950035409770680780, guid: 9728dd29efb36c74aaa4b8c731afdb9d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
+    - target: {fileID: 2949441674866603704, guid: 9728dd29efb36c74aaa4b8c731afdb9d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
+    - target: {fileID: 4573666401942434502, guid: 9728dd29efb36c74aaa4b8c731afdb9d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
+    - target: {fileID: 5174797771443164721, guid: 9728dd29efb36c74aaa4b8c731afdb9d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
+    - target: {fileID: 6243145227582391761, guid: 9728dd29efb36c74aaa4b8c731afdb9d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2816f97f96757b24f9d1865e6e86371e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

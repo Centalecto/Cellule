@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\mic_gene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mic_gene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MIC_Gene.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MIC_Gene.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\MIC_Gene.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MIC_Gene.cs",
-              "RelativeToolTip": "Assets\\Script\\MIC_Gene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T14:58:18.332Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,7 +24,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\MIC_Division.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MIC_Division.cs",
               "RelativeToolTip": "Assets\\Script\\MIC_Division.cs",
-              "ViewState": "AgIAABABAAAAAAAAAAAuwCQBAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAiwOMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-11T13:58:04.141Z",
               "EditorCaption": ""

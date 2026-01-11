@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\MIC_Division.cs" />
+    <Compile Include="Assets\Script\MIC_Gene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -967,8 +967,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2386552110554199363, guid: 11124954e827497408cea2f17b9c6669, type: 3}
+      propertyPath: MaxCellules
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: 11124954e827497408cea2f17b9c6669, type: 3}
       propertyPath: startScale.y
       value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: 11124954e827497408cea2f17b9c6669, type: 3}
+      propertyPath: materialMutations.Array.data[0].scaleDelta
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: 11124954e827497408cea2f17b9c6669, type: 3}
+      propertyPath: materialMutations.Array.data[1].scaleDelta
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: 11124954e827497408cea2f17b9c6669, type: 3}
+      propertyPath: materialMutations.Array.data[2].lifetimeDelta
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: 11124954e827497408cea2f17b9c6669, type: 3}
+      propertyPath: materialMutations.Array.data[3].lifetimeDelta
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: 11124954e827497408cea2f17b9c6669, type: 3}
+      propertyPath: materialMutations.Array.data[5].divisionIntervalDelta
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2521423772464031660, guid: 11124954e827497408cea2f17b9c6669, type: 3}
       propertyPath: m_Name
