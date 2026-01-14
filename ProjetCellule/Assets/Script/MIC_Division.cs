@@ -16,16 +16,28 @@ public class MaterialMutation
 public class MIC_Division : MonoBehaviour
 {
     [Header("Timing")]
-    [SerializeField] private float interval = 5f;
+    [SerializeField] private float interval = 5f;                // L'intervale de spawn -  Voir pour moduler l'interval de division car pour l'instant synchrone entre elles
     [SerializeField] private float stretchDuration = 0.5f;
 
-    [Header("Limite de population")]
-    [SerializeField] private int MaxCellules = 100;
-    private static int NombreCellules = 0;
+    [Header("Randomisation de réplication")]
+    [SerializeField] private float earlyMargin = 0.5f; // peut commencer plus tôt
+    [SerializeField] private float lateMargin = 0.5f;  // peut commencer plus tard
 
-    [Header("Durée de vie")]
+    //Pour limiter le nombre de cellules
+    [Header("Limite de population")]
+    [SerializeField] public int MaxCellules = 100;
+    private static int NombreCellules = 0;                        
+
+    //Durée de vie des cellules
     public float MaxDuréeDeVie = 20f;
     public float TempsDeVie = 0f;
+
+    public bool Destruction = false;
+
+    [Header("Zone de culture")]
+    [SerializeField] private Vector2 cultureMin = new Vector2(-5f, -5f);
+    [SerializeField] private Vector2 cultureMax = new Vector2(5f, 5f);
+    [SerializeField] private float culturePlaneY = 0.069f;
 
     [Header("Scale")]
     [SerializeField] private Vector3 startScale = Vector3.one;
@@ -43,37 +55,20 @@ public class MIC_Division : MonoBehaviour
     [SerializeField] private float damping = 5f;
     [SerializeField] private float sleepVelocityThreshold = 0.05f;
 
-    // =========================
-    // ?? MUTATIONS PAR MATÉRIAU
-    // =========================
-
-    [Header("Mutation")]
+    [Header("Mutation visuelle")]
     [SerializeField, Range(0f, 1f)] private float mutationChance = 0.25f;
 
-    [Tooltip("1 Renderer = 1 slot de mutation")]
-    [SerializeField] private List<Renderer> mutationSlots = new List<Renderer>();
-
-    [Tooltip("Table Matériau ? Effets")]
-    [SerializeField] private List<MaterialMutation> materialMutations = new List<MaterialMutation>();
-
-    // =========================
-    // VALEURS DE BASE (IMMUTABLES)
-    // =========================
-
-    private float baseLifetime;
-    private float baseInterval;
-    private Vector3 currentBaseScale;
+    [SerializeField] private List<Renderer> mutableRenderers = new List<Renderer>();
+    [SerializeField] private List<Material> possibleMaterials = new List<Material>();
 
     private float divisionTimer;
+
     private bool isStretching = false;
     private Rigidbody rb;
     private Vector3 divisionDirection;
 
     private Dictionary<Rigidbody, float> pushTimers = new Dictionary<Rigidbody, float>();
 
-    // =========================
-    // CYCLE DE VIE
-    // =========================
 
     void OnEnable()
     {
@@ -86,21 +81,17 @@ public class MIC_Division : MonoBehaviour
         NombreCellules--;
     }
 
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        TempsDeVie = 0f;
+        TempsDeVie = 0;
     }
 
     void Start()
     {
-        // Sauvegarde des valeurs de base
-        baseLifetime = MaxDuréeDeVie;
-        baseInterval = interval;
-
+        transform.localScale = startScale;
         divisionTimer = interval;
-
-        RecalculateStatsFromMaterials();
     }
 
     void Update()
@@ -109,7 +100,6 @@ public class MIC_Division : MonoBehaviour
         if (TempsDeVie >= MaxDuréeDeVie)
         {
             Destroy(gameObject);
-            return;
         }
 
         if (isStretching) return;
@@ -119,14 +109,25 @@ public class MIC_Division : MonoBehaviour
 
         if (divisionTimer <= 0f)
         {
-            divisionTimer = interval;
+            divisionTimer = interval +Random.Range(-earlyMargin, lateMargin); ;
             TriggerStretch();
         }
     }
 
+
+
     void OnMouseDown()
     {
-        TriggerStretch();
+        if (Destruction == false)
+        {
+            TriggerStretch();
+        }
+
+        if (Destruction == true)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     void TriggerStretch()
@@ -149,104 +150,34 @@ public class MIC_Division : MonoBehaviour
         {
             t += Time.deltaTime / stretchDuration;
 
-            // ?? étirement respectant les mutations
-            transform.localScale = Vector3.Lerp(
-                currentBaseScale,
-                Vector3.Scale(currentBaseScale, maxStretchScale),
-                t
-            );
-
+            transform.localScale = Vector3.Lerp(startScale, maxStretchScale, t);
             transform.position = startPos + divisionDirection * (t * 0.25f);
 
             PushCells(divisionDirection);
+
             yield return null;
         }
 
-        Vector3 clonePos = transform.position + divisionDirection * (currentBaseScale.x * 0.5f);
+        Vector3 rawClonePos = transform.position + divisionDirection * (maxStretchScale.x * 0.5f);
+
+        Vector3 clonePos = new Vector3(
+            Mathf.Clamp(rawClonePos.x, cultureMin.x, cultureMax.x),
+            culturePlaneY,
+            Mathf.Clamp(rawClonePos.z, cultureMin.y, cultureMax.y)
+        );
         GameObject clone = Instantiate(gameObject, clonePos, Quaternion.identity);
+        ApplyVisualMutation(clone);
+        ApplyOverpopulationPenalty(clone);
+        ApplyUnderpopulationBonus(clone);
 
-        ApplyMaterialMutation(clone);
+        Debug.Log("Division ? cellules totales : " + NombreCellules);
 
-        transform.localScale = currentBaseScale;
+        transform.localScale = startScale;
         transform.position = startPos;
 
         pushTimers.Clear();
         isStretching = false;
     }
-
-    // =========================
-    // ?? MUTATIONS
-    // =========================
-
-    void ApplyMaterialMutation(GameObject clone)
-    {
-        if (Random.value > mutationChance) return;
-
-        MIC_Division cd = clone.GetComponent<MIC_Division>();
-        if (cd == null) return;
-        if (cd.mutationSlots.Count == 0) return;
-        if (cd.materialMutations.Count == 0) return;
-
-        int slotIndex = Random.Range(0, cd.mutationSlots.Count);
-        MaterialMutation mutation =
-            cd.materialMutations[Random.Range(0, cd.materialMutations.Count)];
-
-        // IMPORTANT : sharedMaterial
-        cd.mutationSlots[slotIndex].sharedMaterial = mutation.material;
-        cd.RecalculateStatsFromMaterials();
-    }
-
-    void RecalculateStatsFromMaterials()
-    {
-        float scaleMultiplier = 1f;
-        float lifetime = baseLifetime;
-        float divInterval = baseInterval;
-
-        foreach (Renderer slot in mutationSlots)
-        {
-            if (slot == null) continue;
-
-            Material mat = slot.sharedMaterial;
-            if (mat == null) continue;
-
-            MaterialMutation mutation = GetMutationForMaterial(mat);
-            if (mutation == null) continue;
-
-            scaleMultiplier += mutation.scaleDelta;
-            lifetime += mutation.lifetimeDelta;
-            divInterval += mutation.divisionIntervalDelta;
-        }
-
-        scaleMultiplier = Mathf.Max(0.2f, scaleMultiplier);
-        lifetime = Mathf.Max(1f, lifetime);
-        divInterval = Mathf.Max(0.5f, divInterval);
-
-        // ?? conservation de la forme + mutations visibles
-        currentBaseScale = new Vector3(
-            startScale.x * scaleMultiplier,
-            startScale.y * scaleMultiplier,
-            startScale.z * scaleMultiplier
-        );
-
-        transform.localScale = currentBaseScale;
-
-        MaxDuréeDeVie = lifetime;
-        interval = divInterval;
-    }
-
-    MaterialMutation GetMutationForMaterial(Material mat)
-    {
-        foreach (MaterialMutation m in materialMutations)
-        {
-            if (m.material == mat)
-                return m;
-        }
-        return null; // mutation neutre
-    }
-
-    // =========================
-    // PHYSIQUE
-    // =========================
 
     Vector3 RandomHorizontalDirection()
     {
@@ -266,6 +197,7 @@ public class MIC_Division : MonoBehaviour
 
             Rigidbody otherRb = hit.attachedRigidbody;
 
+            // Timer de collision prolongée
             if (!pushTimers.ContainsKey(otherRb))
                 pushTimers[otherRb] = 0f;
 
@@ -274,14 +206,39 @@ public class MIC_Division : MonoBehaviour
             if (pushTimers[otherRb] > stuckTimeThreshold)
             {
                 Vector3 separationDir = (otherRb.position - rb.position).normalized;
+
                 otherRb.AddForce(separationDir * separationForce, ForceMode.Impulse);
                 rb.AddForce(-separationDir * separationForce, ForceMode.Impulse);
             }
             else
             {
+                // Poussée normale
                 otherRb.AddForce(dir * pushForce, ForceMode.Force);
             }
         }
+    }
+
+    void ApplyVisualMutation(GameObject clone)
+    {
+        // Test de chance
+        if (Random.value > mutationChance) return;
+
+        MIC_Division cloneDivision = clone.GetComponent<MIC_Division>();
+        if (cloneDivision == null) return;
+
+        if (cloneDivision.mutableRenderers.Count == 0) return;
+        if (cloneDivision.possibleMaterials.Count == 0) return;
+
+        // Choix aléatoire du Renderer
+        Renderer targetRenderer =
+            cloneDivision.mutableRenderers[Random.Range(0, cloneDivision.mutableRenderers.Count)];
+
+        // Choix aléatoire du matériau
+        Material newMat =
+            cloneDivision.possibleMaterials[Random.Range(0, cloneDivision.possibleMaterials.Count)];
+
+        // IMPORTANT : material (instance unique)
+        targetRenderer.material = newMat;
     }
 
     void FixedUpdate()
@@ -291,11 +248,15 @@ public class MIC_Division : MonoBehaviour
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.zero, damping * Time.fixedDeltaTime);
 
             if (rb.linearVelocity.magnitude < sleepVelocityThreshold)
+            {
                 rb.linearVelocity = Vector3.zero;
+            }
         }
 
         if (rb.linearVelocity.magnitude > maxVelocity)
+        {
             rb.linearVelocity = rb.linearVelocity.normalized * maxVelocity;
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -303,4 +264,44 @@ public class MIC_Division : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position + divisionDirection * pushRadius, pushRadius);
     }
+
+
+    //------------ SURPOPULATION ----------------
+
+    void ApplyOverpopulationPenalty(GameObject clone)
+    {
+        if (!CompteurCellule.IsOverpopulated)
+            return;
+
+        MIC_Division cd = clone.GetComponent<MIC_Division>();
+        if (cd == null) return;
+
+        cd.MaxDuréeDeVie = Mathf.Max(
+            1f,
+            cd.MaxDuréeDeVie - CompteurCellule.CurrentLifetimePenalty
+        );
+    }
+
+    //-------------SOUSPOPULATION-------------------
+
+    void ApplyUnderpopulationBonus(GameObject clone)
+    {
+        if (!CompteurCellule.IsUnderpopulated) return;
+
+        MIC_Division cd = clone.GetComponent<MIC_Division>();
+        if (cd == null) return;
+
+        cd.MaxDuréeDeVie += CompteurCellule.CurrentLifetimeBonus;
+    }
+
+
+    //--------------ALEATOIRE MARGE SPAWN-----------
+
+    float GetRandomizedInterval()
+    {
+        float randomized = interval + Random.Range(-earlyMargin, lateMargin);
+        return Mathf.Max(0.1f, randomized); // sécurité
+    }
+
 }
+
