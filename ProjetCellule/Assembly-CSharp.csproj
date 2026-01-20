@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.59f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\AutoDestroyParticle.cs" />
     <Compile Include="Assets\Script\CompteurCellule.cs" />
     <Compile Include="Assets\Script\MIC_DivisionV2.cs" />
     <Compile Include="Assets\Script\MIC_Division.cs" />

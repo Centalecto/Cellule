@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\assets\\script\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\assets\\script\\ui\\volumesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui\\volumesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\assets\\script\\compteurcellule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,24 +49,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "VolumeSettings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\UI\\VolumeSettings.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UI\\VolumeSettings.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\UI\\VolumeSettings.cs",
+              "RelativeToolTip": "Assets\\Script\\UI\\VolumeSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T06:53:24.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MenuManager.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MenuManager.cs",
               "RelativeToolTip": "Assets\\Script\\MenuManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowEYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T06:37:01.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T06:37:01.204Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CompteurCellule.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\CompteurCellule.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CompteurCellule.cs",
@@ -74,20 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MIC_Division.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MIC_Division.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MIC_Division.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MIC_Division.cs",
               "RelativeToolTip": "Assets\\Script\\MIC_Division.cs",
-              "ViewState": "AgIAAA0BAAAAAAAAAIBQwBMBAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAACgBAAAAAAAAAADwvzQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-11T13:58:04.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CultureManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\R\u00E9serve code REBOOT\\Division cass\u00E9\\CultureManager.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\R\u00E9serve code REBOOT\\Division cass\u00E9\\CultureManager.cs",
@@ -95,11 +110,12 @@
               "RelativeToolTip": "..\\..\\..\\R\u00E9serve code REBOOT\\Division cass\u00E9\\CultureManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T10:22:59.579Z"
+              "WhenOpened": "2026-01-14T10:22:59.579Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CultureManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\CultureManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CultureManager.cs",
@@ -111,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IReservable.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\IReservable.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\IReservable.cs",
@@ -123,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "StorageBox.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\StorageBox.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\StorageBox.cs",
@@ -131,11 +147,12 @@
               "RelativeToolTip": "Assets\\Script\\StorageBox.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwDEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T07:38:15.954Z"
+              "WhenOpened": "2026-01-14T07:38:15.954Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Division_Couleur.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\Division_Couleur.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Division_Couleur.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MIC_Gene.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MIC_Gene.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MIC_Gene.cs",

@@ -61,6 +61,9 @@ public class MIC_Division : MonoBehaviour
     [SerializeField] private List<Renderer> mutableRenderers = new List<Renderer>();
     [SerializeField] private List<Material> possibleMaterials = new List<Material>();
 
+    [Header("Destruction FX")]
+    [SerializeField] private GameObject destructionEffectPrefab;    //FX de destruction
+
     private float divisionTimer;
 
     private bool isStretching = false;
@@ -99,7 +102,7 @@ public class MIC_Division : MonoBehaviour
         TempsDeVie += Time.deltaTime;
         if (TempsDeVie >= MaxDuréeDeVie)
         {
-            Destroy(gameObject);
+            DestroyCell();
         }
 
         if (isStretching) return;
@@ -125,7 +128,7 @@ public class MIC_Division : MonoBehaviour
 
         if (Destruction == true)
         {
-            Destroy(gameObject);
+            DestroyCell();
         }
         
     }
@@ -259,6 +262,19 @@ public class MIC_Division : MonoBehaviour
         }
     }
 
+
+    void DestroyCell()
+    {
+        // Spawn FX
+        if (destructionEffectPrefab != null)
+        {
+            Instantiate(destructionEffectPrefab,transform.position,Quaternion.identity);
+        }
+
+        Destroy(gameObject);
+    }
+
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
@@ -304,4 +320,3 @@ public class MIC_Division : MonoBehaviour
     }
 
 }
-
