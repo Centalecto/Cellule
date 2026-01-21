@@ -10,6 +10,8 @@ public class CultureManager : MonoBehaviour
     [Header("Cellule de base")]
     [SerializeField] private GameObject baseCellPrefab;
 
+    public AudioSource SonReset;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -28,8 +30,8 @@ public class CultureManager : MonoBehaviour
 
         foreach (MIC_Division cell in allCells)
         {
-
-            Destroy(cell.gameObject);
+            SonReset.Play();
+            cell.DestroyCell();
         }
 
 

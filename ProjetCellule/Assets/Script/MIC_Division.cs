@@ -26,7 +26,9 @@ public class MIC_Division : MonoBehaviour
     //Pour limiter le nombre de cellules
     [Header("Limite de population")]
     [SerializeField] public int MaxCellules = 100;
-    private static int NombreCellules = 0;                        
+    private static int NombreCellules = 0;
+
+    public AudioSource SonMortCellule;
 
     //Durée de vie des cellules
     public float MaxDuréeDeVie = 20f;
@@ -128,6 +130,7 @@ public class MIC_Division : MonoBehaviour
 
         if (Destruction == true)
         {
+            SonMortCellule.Play();
             DestroyCell();
         }
         
@@ -263,14 +266,19 @@ public class MIC_Division : MonoBehaviour
     }
 
 
-    void DestroyCell()
+    public void DestroyCell()
     {
+
+        
+
+
+
+
         // Spawn FX
         if (destructionEffectPrefab != null)
         {
             Instantiate(destructionEffectPrefab,transform.position,Quaternion.identity);
         }
-
         Destroy(gameObject);
     }
 
