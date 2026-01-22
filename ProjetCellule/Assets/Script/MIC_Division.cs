@@ -56,6 +56,13 @@ public class MIC_Division : MonoBehaviour
     [SerializeField] private float stuckTimeThreshold = 0.5f;
     [SerializeField] private LayerMask cellLayer;
 
+    [Header("Anti-chevauchement")]
+    [SerializeField] private bool enableSoftSeparation = true;
+    [SerializeField] private float separationRadius = 0.6f;
+    [SerializeField] private float separationStrength = 1.5f;
+    [SerializeField] private float maxSeparationForce = 3f;
+
+
     [Header("Stabilisation")]
     [SerializeField] private float maxVelocity = 2f;
     [SerializeField] private float damping = 5f;
@@ -266,6 +273,8 @@ public class MIC_Division : MonoBehaviour
     {
         if (!isStretching)
         {
+            SoftSeparation();
+
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.zero, damping * Time.fixedDeltaTime);
 
             if (rb.linearVelocity.magnitude < sleepVelocityThreshold)
@@ -340,6 +349,41 @@ public class MIC_Division : MonoBehaviour
     {
         float randomized = interval + Random.Range(-earlyMargin, lateMargin);
         return Mathf.Max(0.1f, randomized); // sécurité
+    }
+
+
+    //----------------------- POUSSÉE DOUCE ANTI-CHEVAUCHEMENT -----------------------
+
+    void SoftSeparation()
+    {
+        if (!enableSoftSeparation) return;
+        if (isStretching) return;
+
+        Collider[] neighbors = Physics.OverlapSphere(
+            transform.position,
+            separationRadius,
+            cellLayer
+        );
+
+        foreach (Collider col in neighbors)
+        {
+            if (col.attachedRigidbody == null) continue;
+            if (col.gameObject == gameObject) continue;
+
+            Rigidbody otherRb = col.attachedRigidbody;
+
+            Vector3 dir = rb.position - otherRb.position;
+            float dist = dir.magnitude;
+
+            if (dist < 0.001f) continue;
+
+            float strength = separationStrength * (1f - dist / separationRadius);
+            Vector3 force = dir.normalized * strength;
+
+            force = Vector3.ClampMagnitude(force, maxSeparationForce);
+
+            rb.AddForce(force, ForceMode.Force);
+        }
     }
 
 }
