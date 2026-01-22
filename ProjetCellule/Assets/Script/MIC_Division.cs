@@ -30,6 +30,10 @@ public class MIC_Division : MonoBehaviour
 
     public AudioSource SonMortCellule;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip sonMortCellule;
+    [SerializeField] private float volumeMort = 1f;
+
     //Durée de vie des cellules
     public float MaxDuréeDeVie = 20f;
     public float TempsDeVie = 0f;
@@ -130,12 +134,23 @@ public class MIC_Division : MonoBehaviour
 
         if (Destruction == true)
         {
-            SonMortCellule.Play();
+            PlayDeathSound();
+            //SonMortCellule.Play();
             DestroyCell();
         }
         
     }
 
+    //----------------- SON MORT CELLULE -----------------
+
+    void PlayDeathSound()
+    {
+        if (sonMortCellule == null) return;
+
+        AudioSource.PlayClipAtPoint(sonMortCellule,transform.position,volumeMort);
+    }
+
+    //----------------------------------------------
     void TriggerStretch()
     {
         if (isStretching) return;

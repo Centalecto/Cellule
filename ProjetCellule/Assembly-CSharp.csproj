@@ -65,6 +65,7 @@
     <Compile Include="Assets\Script\CompteurCellule.cs" />
     <Compile Include="Assets\Script\MIC_DivisionV2.cs" />
     <Compile Include="Assets\Script\MIC_Division.cs" />
+    <Compile Include="Assets\Script\KillZone.cs" />
     <Compile Include="Assets\Script\Division_Couleur.cs" />
     <Compile Include="Assets\Script\MenuManager.cs" />
     <Compile Include="Assets\Script\CultureManager.cs" />

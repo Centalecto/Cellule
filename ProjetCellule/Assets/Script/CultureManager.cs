@@ -22,15 +22,14 @@ public class CultureManager : MonoBehaviour
 
     public void ResetCulture()
     {
-        MIC_Division[] allCells = Object.FindObjectsByType<MIC_Division>(
-            FindObjectsSortMode.None
-        );
+        MIC_Division[] allCells = Object.FindObjectsByType<MIC_Division>(FindObjectsSortMode.None);
 
         int aliveCells = 0;
 
+        SonReset.Play();
+
         foreach (MIC_Division cell in allCells)
         {
-            SonReset.Play();
             cell.DestroyCell();
         }
 
