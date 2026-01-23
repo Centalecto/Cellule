@@ -132,6 +132,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 310aa30eb9581c7478535bbd569d19f0, type: 2}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: mutationChance
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: mutableRenderers.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -139,6 +143,106 @@ PrefabInstance:
       propertyPath: 'mutableRenderers.Array.data[5]'
       value: 
       objectReference: {fileID: 832480299}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[0].enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[0].enabledGroupeMutation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[1].enabledGroupeMutation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[0].targetRenderers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[1].targetRenderers.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[0].referenceMaterials.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[0].targetRenderers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 19629720}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[0].targetRenderers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 832480299}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[1].referenceMaterials.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].targetRenderers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 19629719}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].targetRenderers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 19629718}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].targetRenderers.Array.data[2]'
+      value: 
+      objectReference: {fileID: 19629717}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].targetRenderers.Array.data[3]'
+      value: 
+      objectReference: {fileID: 19629716}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].targetRenderers.Array.data[4]'
+      value: 
+      objectReference: {fileID: 19629715}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 310aa30eb9581c7478535bbd569d19f0, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bc944e457a5ac144da7aed37560e9290, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 26b028dca23124b439a9b331d654ee19, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9df271caf24efd447b241ef54cb156b4, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8dd7e9bb1ba562a438b35253d79e45b4, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].referenceMaterials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 310aa30eb9581c7478535bbd569d19f0, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].referenceMaterials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bc944e457a5ac144da7aed37560e9290, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].referenceMaterials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 26b028dca23124b439a9b331d654ee19, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].referenceMaterials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9df271caf24efd447b241ef54cb156b4, type: 2}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: 'visualMutationGroups.Array.data[1].referenceMaterials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8dd7e9bb1ba562a438b35253d79e45b4, type: 2}
     - target: {fileID: 2521423772464031660, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: m_Name
       value: Cellule Avec Plasmide
@@ -188,6 +292,36 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+--- !u!23 &19629715 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6493548203773559027, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+  m_PrefabInstance: {fileID: 19629714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &19629716 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4513511687933880846, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+  m_PrefabInstance: {fileID: 19629714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &19629717 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5293608996382548977, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+  m_PrefabInstance: {fileID: 19629714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &19629718 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8697890998990536686, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+  m_PrefabInstance: {fileID: 19629714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &19629719 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3197174109195262422, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+  m_PrefabInstance: {fileID: 19629714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &19629720 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 903448811074846686, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+  m_PrefabInstance: {fileID: 19629714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &43856889
 GameObject:
   m_ObjectHideFlags: 0

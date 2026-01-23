@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mic_division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\assets\\script\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|c:\\users\\user\\documents\\projet semstriel 1\\reboot 01 2026\\projet github\\cellule\\projetcellule\\assets\\script\\culturemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\assets\\script\\culturemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB6DE311-508E-2CB7-4286-9A607D18340E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\culturemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -65,8 +65,7 @@
               "RelativeToolTip": "Assets\\Script\\KillZone.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T08:17:05.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-22T08:17:05.197Z"
             },
             {
               "$type": "Document",
@@ -124,7 +123,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\MIC_Division.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Projet Semstriel 1\\REBOOT 01 2026\\Projet Github\\Cellule\\ProjetCellule\\Assets\\Script\\MIC_Division.cs",
               "RelativeToolTip": "Assets\\Script\\MIC_Division.cs",
-              "ViewState": "AgIAAEUBAAAAAAAAAAAzwFgBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAAAB8BAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-11T13:58:04.141Z",
               "EditorCaption": ""
@@ -139,8 +138,7 @@
               "RelativeToolTip": "Assets\\Script\\CultureManager.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAzwCQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T08:32:01.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-14T08:32:01.522Z"
             },
             {
               "$type": "Document",

@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class VolumeSettings : MonoBehaviour
+public class VolumeSettings : MonoBehaviour, IPointerUpHandler
 {
     [SerializeField] private Slider volumeSlider;
+
+    [Header("Son de test")]
+    [SerializeField] private AudioSource testAudioSource;
 
     void Start()
     {
@@ -19,5 +23,14 @@ public class VolumeSettings : MonoBehaviour
     {
         AudioListener.volume = value;
         PlayerPrefs.SetFloat("MasterVolume", value);
+    }
+
+    // Appelé quand on relâche le slider
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (testAudioSource != null)
+        {
+            testAudioSource.Play();
+        }
     }
 }

@@ -13,6 +13,19 @@ public class MaterialMutation
     public float divisionIntervalDelta;
 }
 
+
+
+[System.Serializable]
+public class VisualMutationGroup
+{
+    public bool enabledGroupeMutation = true;
+
+
+    public List<Renderer> targetRenderers = new List<Renderer>();
+    public List<Material> referenceMaterials = new List<Material>();
+}
+
+
 public class MIC_Division : MonoBehaviour
 {
     [Header("Timing")]
@@ -71,8 +84,7 @@ public class MIC_Division : MonoBehaviour
     [Header("Mutation visuelle")]
     [SerializeField, Range(0f, 1f)] private float mutationChance = 0.25f;
 
-    [SerializeField] private List<Renderer> mutableRenderers = new List<Renderer>();
-    [SerializeField] private List<Material> possibleMaterials = new List<Material>();
+    [SerializeField] private List<VisualMutationGroup> visualMutationGroups = new List<VisualMutationGroup>();
 
     [Header("Destruction FX")]
     [SerializeField] private GameObject destructionEffectPrefab;    //FX de destruction
@@ -248,25 +260,26 @@ public class MIC_Division : MonoBehaviour
 
     void ApplyVisualMutation(GameObject clone)
     {
-        // Test de chance
         if (Random.value > mutationChance) return;
 
-        MIC_Division cloneDivision = clone.GetComponent<MIC_Division>();
-        if (cloneDivision == null) return;
+        MIC_Division cd = clone.GetComponent<MIC_Division>();
+        if (cd == null) return;
 
-        if (cloneDivision.mutableRenderers.Count == 0) return;
-        if (cloneDivision.possibleMaterials.Count == 0) return;
+        foreach (VisualMutationGroup group in cd.visualMutationGroups)
+        {
+            if (!group.enabledGroupeMutation) continue;
+            if (group.targetRenderers.Count == 0) continue;
+            if (group.referenceMaterials.Count == 0) continue;
 
-        // Choix aléatoire du Renderer
-        Renderer targetRenderer =
-            cloneDivision.mutableRenderers[Random.Range(0, cloneDivision.mutableRenderers.Count)];
+            Renderer targetRenderer =
+                group.targetRenderers[Random.Range(0, group.targetRenderers.Count)];
 
-        // Choix aléatoire du matériau
-        Material newMat =
-            cloneDivision.possibleMaterials[Random.Range(0, cloneDivision.possibleMaterials.Count)];
+            Material chosenMaterial =
+                group.referenceMaterials[Random.Range(0, group.referenceMaterials.Count)];
 
-        // IMPORTANT : material (instance unique)
-        targetRenderer.material = newMat;
+            // IMPORTANT : instancie le matériau pour CETTE cellule uniquement
+            targetRenderer.material = new Material(chosenMaterial);
+        }
     }
 
     void FixedUpdate()
