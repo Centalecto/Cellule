@@ -146,6 +146,11 @@ public class MIC_Division : MonoBehaviour
 
     void OnMouseDown()
     {
+
+        if (PauseManager.IsPaused)
+            return;
+
+
         if (Destruction == false)
         {
             TriggerStretch();

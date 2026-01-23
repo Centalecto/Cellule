@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\MenuManager.cs" />
     <Compile Include="Assets\Script\CultureManager.cs" />
     <Compile Include="Assets\Script\MIC_Gene.cs" />
+    <Compile Include="Assets\Script\UI\PauseManager.cs" />
     <Compile Include="Assets\Script\UI\VolumeSettings.cs" />
   </ItemGroup>
   <ItemGroup>

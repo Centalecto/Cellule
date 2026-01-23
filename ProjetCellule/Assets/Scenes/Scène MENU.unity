@@ -370,7 +370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &219873447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &809214494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,7 +916,7 @@ RectTransform:
   m_Father: {fileID: 703865319}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPanel: {fileID: 219873446}
   optionsPanel: {fileID: 809214493}
-  gameSceneName: Proto mutation
+  gameSceneName: Zone Test
   uiClickSound: {fileID: 1808579410}
 --- !u!4 &1615792133
 Transform:
@@ -1970,7 +1970,7 @@ GameObject:
   - component: {fileID: 1808579411}
   - component: {fileID: 1808579410}
   m_Layer: 0
-  m_Name: Audio Source Menu
+  m_Name: Audio  Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,7 +1987,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 83dddeab3ac5e2446a48018daa57b978, type: 3}
+  m_Resource: {fileID: 8300000, guid: 760fb9d2e47f1d8408494bc6ff3945ac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2483,7 +2483,7 @@ RectTransform:
   m_Father: {fileID: 2074171065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -184,19 +184,31 @@ MonoBehaviour:
   maxVelocity: 2
   damping: 5
   sleepVelocityThreshold: 0.05
-  mutationChance: 0.33
-  mutableRenderers:
-  - {fileID: 903448811074846686}
-  - {fileID: 8697890998990536686}
-  - {fileID: 5293608996382548977}
-  - {fileID: 4513511687933880846}
-  - {fileID: 6493548203773559027}
-  possibleMaterials:
-  - {fileID: 2100000, guid: bc944e457a5ac144da7aed37560e9290, type: 2}
-  - {fileID: 2100000, guid: 26b028dca23124b439a9b331d654ee19, type: 2}
-  - {fileID: 2100000, guid: 9df271caf24efd447b241ef54cb156b4, type: 2}
-  - {fileID: 2100000, guid: 8dd7e9bb1ba562a438b35253d79e45b4, type: 2}
-  - {fileID: 2100000, guid: 310aa30eb9581c7478535bbd569d19f0, type: 2}
+  mutationChance: 0.25
+  visualMutationGroups:
+  - enabledGroupeMutation: 1
+    targetRenderers:
+    - {fileID: 903448811074846686}
+    - {fileID: 5778266855377127538}
+    referenceMaterials:
+    - {fileID: 2100000, guid: 310aa30eb9581c7478535bbd569d19f0, type: 2}
+    - {fileID: 2100000, guid: bc944e457a5ac144da7aed37560e9290, type: 2}
+    - {fileID: 2100000, guid: 26b028dca23124b439a9b331d654ee19, type: 2}
+    - {fileID: 2100000, guid: 9df271caf24efd447b241ef54cb156b4, type: 2}
+    - {fileID: 2100000, guid: 8dd7e9bb1ba562a438b35253d79e45b4, type: 2}
+  - enabledGroupeMutation: 1
+    targetRenderers:
+    - {fileID: 3197174109195262422}
+    - {fileID: 8697890998990536686}
+    - {fileID: 5293608996382548977}
+    - {fileID: 4513511687933880846}
+    - {fileID: 6493548203773559027}
+    referenceMaterials:
+    - {fileID: 2100000, guid: 310aa30eb9581c7478535bbd569d19f0, type: 2}
+    - {fileID: 2100000, guid: bc944e457a5ac144da7aed37560e9290, type: 2}
+    - {fileID: 2100000, guid: 26b028dca23124b439a9b331d654ee19, type: 2}
+    - {fileID: 2100000, guid: 9df271caf24efd447b241ef54cb156b4, type: 2}
+    - {fileID: 2100000, guid: 8dd7e9bb1ba562a438b35253d79e45b4, type: 2}
   destructionEffectPrefab: {fileID: 1430904193655534678, guid: 811e306ffdac57a40ab7d6b3ea672cad, type: 3}
 --- !u!82 &1553745194174583938
 AudioSource:
@@ -482,6 +494,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b029954c690a3e04f8dbc97cb3274986, type: 3}
+--- !u!23 &3197174109195262422 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1923173540254250913, guid: b029954c690a3e04f8dbc97cb3274986, type: 3}
+  m_PrefabInstance: {fileID: 3958339495536897655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4329516378466230969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 791315192332356814, guid: b029954c690a3e04f8dbc97cb3274986, type: 3}
