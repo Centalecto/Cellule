@@ -377,11 +377,7 @@ public class MIC_Division : MonoBehaviour
         if (!enableSoftSeparation) return;
         if (isStretching) return;
 
-        Collider[] neighbors = Physics.OverlapSphere(
-            transform.position,
-            separationRadius,
-            cellLayer
-        );
+        Collider[] neighbors = Physics.OverlapSphere(transform.position,separationRadius,cellLayer);
 
         foreach (Collider col in neighbors)
         {
@@ -395,7 +391,7 @@ public class MIC_Division : MonoBehaviour
 
             if (dist < 0.001f) continue;
 
-            float strength = separationStrength * (1f - dist / separationRadius);
+            float strength = separationStrength * (1f - -dist / separationRadius);
             Vector3 force = dir.normalized * strength;
 
             force = Vector3.ClampMagnitude(force, maxSeparationForce);
