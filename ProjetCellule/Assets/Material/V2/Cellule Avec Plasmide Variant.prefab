@@ -9,9 +9,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 903448811074846686, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903448811074846686, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903448811074846686, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 08a923f5073067449b6d918549d02fab, type: 2}
+      objectReference: {fileID: 2100000, guid: ffe6bc052bd0a3549aecf636c6a5619e, type: 2}
+    - target: {fileID: 2330380443698249008, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.00222582
+      objectReference: {fileID: 0}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: separationRadius
       value: 0.5
@@ -31,23 +43,23 @@ PrefabInstance:
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 08a923f5073067449b6d918549d02fab, type: 2}
+      objectReference: {fileID: 2100000, guid: ffe6bc052bd0a3549aecf636c6a5619e, type: 2}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8e88560caa5cabf4486d329423cc8c48, type: 2}
+      objectReference: {fileID: 2100000, guid: 14cb7abc7a3f853499e0d57d5af356b6, type: 2}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[2]'
       value: 
-      objectReference: {fileID: 2100000, guid: a6bbcd34e84cabf4eb13aec075db0aa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 1f676e857a739314eaf05bd58f5d5e5b, type: 2}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[3]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4d832a9234ce5a047afea3e86e72fb5b, type: 2}
+      objectReference: {fileID: 2100000, guid: 2ad37fbea79a6d24b994ae5d7ecae4c7, type: 2}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[4]'
       value: 
-      objectReference: {fileID: 2100000, guid: edc4ca65c287db5408d6d402476284bf, type: 2}
+      objectReference: {fileID: 2100000, guid: 72b241d93e052324890ef44530d28f47, type: 2}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: 'visualMutationGroups.Array.data[0].referenceMaterials.Array.data[5]'
       value: 
@@ -76,9 +88,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cellule Avec Plasmide Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4084047115540312449, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.00222582
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329516378466230969, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 14.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329516378466230969, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 14.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329516378466230969, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 104.85715
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329516378466230969, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365983244893703051, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.00222582
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402027096186055496, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884160814968081430, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.00222582
+      objectReference: {fileID: 0}
     - target: {fileID: 7637037501568563088, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7637037501568563088, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -86,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7637037501568563088, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7637037501568563088, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: m_LocalRotation.w
