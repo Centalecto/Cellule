@@ -20,6 +20,9 @@ public class VisualMutationGroup
 {
     public bool enabledGroupeMutation = true;
 
+    [Header("Chance de mutation de ce groupe")]
+    [Range(0f, 1f)]
+    public float mutationChance = 0.5f;
 
     public List<Renderer> targetRenderers = new List<Renderer>();
     public List<Material> referenceMaterials = new List<Material>();
@@ -265,6 +268,7 @@ public class MIC_Division : MonoBehaviour
 
     void ApplyVisualMutation(GameObject clone)
     {
+        // ----- Tirage GLOBAL -----
         if (Random.value > mutationChance) return;
 
         MIC_Division cd = clone.GetComponent<MIC_Division>();
@@ -276,13 +280,15 @@ public class MIC_Division : MonoBehaviour
             if (group.targetRenderers.Count == 0) continue;
             if (group.referenceMaterials.Count == 0) continue;
 
+            // ----- Tirage PAR GROUPE -----
+            if (Random.value > group.mutationChance) continue;
+
             Renderer targetRenderer =
                 group.targetRenderers[Random.Range(0, group.targetRenderers.Count)];
 
             Material chosenMaterial =
                 group.referenceMaterials[Random.Range(0, group.referenceMaterials.Count)];
 
-            // IMPORTANT : instancie le matériau pour CETTE cellule uniquement
             targetRenderer.material = new Material(chosenMaterial);
         }
     }

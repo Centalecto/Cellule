@@ -25,12 +25,24 @@ PrefabInstance:
       value: 0.00222582
       objectReference: {fileID: 0}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: mutationChance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: separationRadius
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: enableSoftSeparation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[0].mutationChance
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
+      propertyPath: visualMutationGroups.Array.data[1].mutationChance
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2386552110554199363, guid: e6c58c7b412430545aeb03619db7addd, type: 3}
       propertyPath: visualMutationGroups.Array.data[0].referenceMaterials.Array.size
